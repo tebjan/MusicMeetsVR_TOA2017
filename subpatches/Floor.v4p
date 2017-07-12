@@ -31,9 +31,9 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" slicecount="1" values="20">
+   <PIN pinname="Spread Count" slicecount="1" values="8">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="10">
+   <PIN pinname="Width" slicecount="1" values="3.67">
    </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="1" dstpinname="X In">

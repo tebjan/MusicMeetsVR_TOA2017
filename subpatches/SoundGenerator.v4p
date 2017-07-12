@@ -28,7 +28,7 @@
    <PIN pinname="Audio Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="28">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="28">
    <BOUNDS type="Node" left="4905" top="5250" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4905" top="5250" width="2400" height="1800">
