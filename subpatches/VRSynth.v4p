@@ -1,9 +1,9 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\VRSynth.v4p" systemname="VRSynth" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\VRSynth.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="1230" top="1410" width="14700" height="14040">
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\VRSynth.v4p" systemname="VRSynth" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\VRSynth.v4p" scrollx="0" scrolly="5532">
+   <BOUNDS type="Window" left="4524" top="1200" width="14700" height="13008">
    </BOUNDS>
    <NODE systemname="StereoMixer (VAudio Filter)" filename="%VVVV%\packs\VVVV.Audio\nodes\modules\StereoMixer (VAudio Filter).v4p" nodename="StereoMixer (VAudio Filter)" componentmode="Hidden" id="224">
-   <BOUNDS type="Node" left="795" top="10845" width="100" height="100">
+   <BOUNDS type="Node" left="807" top="12045" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -11,6 +11,8 @@
    </PIN>
    <BOUNDS type="Window" left="6120" top="4725" width="7095" height="6585">
    </BOUNDS>
+   <PIN pinname="Gain" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="225" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1170" top="10380" width="795" height="240">
@@ -25,13 +27,13 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Gain">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="225" srcpinname="Y Output Value" dstnodeid="224" dstpinname="Gain">
-   </LINK>
-   <NODE systemname="VSTHost (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.VST.dll" nodename="VSTHost (VAudio Source)" componentmode="InAWindow" id="226">
-   <BOUNDS type="Node" left="810" top="11940" width="100" height="100">
+   <NODE systemname="VSTHost (VAudio Source)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.VST.dll" nodename="VSTHost (VAudio Source)" componentmode="Hidden" id="226">
+   <BOUNDS type="Node" left="822" top="13140" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="810" top="11940" width="3000" height="3000">
+   <BOUNDS type="Box" left="822" top="13140" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -47,9 +49,9 @@
    <LINK srcnodeid="224" srcpinname="Output" dstnodeid="226" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="227" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="2175" top="11385" width="795" height="240">
+   <BOUNDS type="Box" left="2187" top="12585" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2175" top="11385" width="0" height="0">
+   <BOUNDS type="Node" left="2187" top="12585" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="..\vst\TAL-Reverb-2-64.dll">
    </PIN>
@@ -91,7 +93,7 @@
    <NODE id="163" systemname="AudioOut (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="AudioOut (VAudio)" componentmode="Hidden">
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
-   <BOUNDS type="Node" left="795" top="12555" width="750" height="270">
+   <BOUNDS type="Node" left="807" top="13755" width="750" height="270">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="226" srcpinname="Audio Out" dstnodeid="163" dstpinname="Input">
@@ -473,9 +475,9 @@
    <LINK srcnodeid="278" srcpinname="Output" dstnodeid="274" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="280">
-   <BOUNDS type="Box" left="2940" top="12540" width="795" height="240">
+   <BOUNDS type="Box" left="2952" top="13740" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2940" top="12540" width="0" height="0">
+   <BOUNDS type="Node" left="2952" top="13740" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Audio Out|">
    </PIN>
@@ -483,5 +485,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="226" srcpinname="Audio Out" dstnodeid="280" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <LINK srcnodeid="225" srcpinname="Y Output Value" dstnodeid="224" dstpinname="Gain">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\patches\subpatches\Boxes.v4p" systemname="Boxes" filename="C:\vvvv\PROJECTS\2016\07_OpenVR\VVVV.OpenVR\girlpower\subpatches\Boxes.v4p" scrollx="0" scrolly="360">
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\Boxes.v4p" systemname="Boxes" filename="C:\vvvv\PROJECTS\2016\07_OpenVR\VVVV.OpenVR\girlpower\subpatches\Boxes.v4p" scrollx="0" scrolly="360">
    <NODE systemname="PhongDirectional (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\PhongDirectional.fx" nodename="PhongDirectional (DX11.Effect)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3660" top="7395" width="100" height="100">
    </BOUNDS>
@@ -98,7 +98,7 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="14" dstpinname="Input Node">
    </LINK>
-   <BOUNDS type="Window" left="0" top="0" width="17340" height="15420">
+   <BOUNDS type="Window" left="-156" top="156" width="14244" height="11472">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -172,4 +172,6 @@
    </LINK>
    <LINK srcnodeid="18" srcpinname="XYZ" dstnodeid="19" dstpinname="Translate XYZ">
    </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\patches\subpatches\MusicVisualization.v4p" systemname="MusicVisualization" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\patches\subpatches\MusicVisualization.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\MusicVisualization.v4p" systemname="MusicVisualization" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\patches\subpatches\MusicVisualization.v4p" scrollx="780" scrolly="2988">
    <NODE id="0" systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden">
    <BOUNDS type="Node" left="3405" top="5745" width="100" height="100">
    </BOUNDS>
@@ -89,9 +89,9 @@
    </PIN>
    </NODE>
    <NODE id="9" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10470" top="8205" width="795" height="240">
+   <BOUNDS type="Box" left="10182" top="8181" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="10470" top="8205" width="0" height="0">
+   <BOUNDS type="Node" left="10182" top="8181" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="20">
    </PIN>
@@ -468,7 +468,7 @@
    </LINK>
    <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="41" dstpinname="Input 1">
    </LINK>
-   <BOUNDS type="Window" left="0" top="0" width="17340" height="15420">
+   <BOUNDS type="Window" left="-156" top="156" width="14244" height="11472">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -485,7 +485,7 @@
    <LINK srcnodeid="49" srcpinname="Input Value" dstnodeid="26" dstpinname="Light DirectionXYZ">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="50">
-   <BOUNDS type="Node" left="10755" top="10350" width="100" height="100">
+   <BOUNDS type="Node" left="13023" top="8646" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="AudioBufferData">
    </PIN>
@@ -507,7 +507,7 @@
    <LINK srcnodeid="51" srcpinname="Output" dstnodeid="6" dstpinname="VerticesXYZ">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="52">
-   <BOUNDS type="Node" left="10770" top="11235" width="100" height="100">
+   <BOUNDS type="Node" left="13026" top="10143" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -521,11 +521,11 @@
    <LINK srcnodeid="52" srcpinname="Output" dstnodeid="51" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="53">
-   <BOUNDS type="Box" left="11025" top="10710" width="795" height="240">
+   <BOUNDS type="Box" left="13281" top="9618" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="11025" top="10710" width="0" height="0">
+   <BOUNDS type="Node" left="13281" top="9618" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -534,4 +534,6 @@
    </NODE>
    <LINK srcnodeid="53" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Input 2">
    </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

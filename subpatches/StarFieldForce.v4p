@@ -1,85 +1,7 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\StarFieldForce.v4p" scrollx="960" scrolly="0" systemname="StarFieldForce" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\StarFieldForce.v4p">
-   <BOUNDS type="Window" left="2070" top="1905" width="12915" height="12345">
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\StarFieldForce.v4p" scrollx="540" scrolly="1608" systemname="StarFieldForce" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\StarFieldForce.v4p">
+   <BOUNDS type="Window" left="540" top="1248" width="12912" height="12336">
    </BOUNDS>
-   <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="8" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="4410" top="9705" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="4410" top="9705">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="6" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="5070" top="9285" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="6" srcpinname="Layer Out" dstnodeid="8" dstpinname="Layer In">
-   </LINK>
-   <NODE id="4" systemname="AxisAndGrid (DX11)" filename="%VVVV%\packs\dx11\nodes\modules\AxisAndGrid\AxisAndGrid (DX11).v4p" nodename="AxisAndGrid (DX11)" componentmode="Hidden" hiddenwhenlocked="1">
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <BOUNDS type="Node" left="2805" top="8865" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2805" top="8865">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="Camera (Transform Orbit Legacy)" filename="%VVVV%\addonpack\lib\nodes\modules\_legacy\Camera (Transform Orbit Legacy).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="3" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="5745" top="9705" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="View Projection" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="5745" top="9705">
-   </BOUNDS>
-   <PIN pinname="Initial Pitch" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Initial Yaw" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Initial Distance" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Target Initial Position" visible="1" slicecount="3" values="0,0,0">
-   </PIN>
-   <PIN pinname="Camera Direction" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="Hidden" id="9" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="4215" top="10125" width="2655" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4215" top="10125" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="14805" top="1905" width="12915" height="12345">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="View" visible="1">
-   </PIN>
-   <PIN pinname="Depth Buffer Mode" slicecount="1" values="None">
-   </PIN>
-   <PIN pinname="Depth Buffer Format" slicecount="1" values="D32_Float">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="8" srcpinname="Layer Out" dstnodeid="9" dstpinname="Layers">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="View Projection" dstnodeid="9" dstpinname="View">
-   </LINK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.2">
@@ -123,7 +45,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2400" top="2520" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1000">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5000">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -214,16 +136,6 @@
    <PIN pinname="PositionXY" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="72">
-   <BOUNDS type="Node" left="8850" top="3570" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8850" top="3570" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="21495" top="14325" width="4395" height="3345">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="73" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="7320" top="4095" width="795" height="240">
    </BOUNDS>
@@ -234,8 +146,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="View Projection" dstnodeid="73" dstpinname="Input Node" hiddenwhenlocked="1">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="74" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="6945" top="3015" width="795" height="240">
    </BOUNDS>
@@ -248,12 +158,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="72" dstpinname="Texture In" linkstyle="VHV">
-   <LINKPOINT x="7330" y="3373">
-   </LINKPOINT>
-   <LINKPOINT x="8525" y="3423">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="75" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="7485" top="5055" width="675" height="240">
    </BOUNDS>
@@ -464,8 +368,6 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
-   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 1">
-   </LINK>
    <NODE id="90" systemname="Blend (DX11.RenderState Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState Advanced)" componentmode="Hidden" hiddenwhenlocked="1" managers="">
    <BOUNDS type="Node" left="3750" top="8250" width="100" height="100">
    </BOUNDS>
@@ -509,7 +411,7 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
-   <PIN pinname="Input Node" slicecount="1" values="||" visible="1">
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
    <NODE id="11" componentmode="Hidden" systemname="Sprite (DX11.Particles.Effect)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Effects\Sprite (DX11.Particles.Effect).v4p" nodename="Sprite (DX11.Particles.Effect)" hiddenwhenlocked="1">
@@ -532,8 +434,6 @@
    <PIN pinname="Technique" slicecount="1" values="Sprite">
    </PIN>
    </NODE>
-   <LINK srcnodeid="11" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 2">
-   </LINK>
    <LINK srcnodeid="90" srcpinname="Render State" dstnodeid="11" dstpinname="Render State">
    </LINK>
    <LINK srcnodeid="10" srcpinname="ParticleSystemBuffers" dstnodeid="11" dstpinname="ParticleSystemBuffers">
@@ -567,10 +467,12 @@
    </PIN>
    <PIN pinname="Ambient Color" slicecount="1" values="|0.47373,0.47373,0.47373,1.00000|">
    </PIN>
+   <PIN pinname="Default Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="ParticleSystemBuffers" dstnodeid="92" dstpinname="ParticleSystemBuffers">
-   </LINK>
-   <LINK srcnodeid="92" srcpinname="Layer" dstnodeid="91" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="93" srcpinname="Geometry Out" dstnodeid="92" dstpinname="Geometry">
    </LINK>
@@ -595,8 +497,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="71" srcpinname="PositionXY" dstnodeid="70" dstpinname="TranslateXY">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Camera Direction" dstnodeid="70" dstpinname="Camera Direction" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="70" srcpinname="Texture Out" dstnodeid="74" dstpinname="Input Node">
    </LINK>
@@ -623,5 +523,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="69" srcpinname="Layer" dstnodeid="25" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="92" srcpinname="Layer" dstnodeid="91" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Render State" dstnodeid="92" dstpinname="Render State">
    </LINK>
    </PATCH>
