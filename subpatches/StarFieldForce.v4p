@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\StarFieldForce.v4p" scrollx="540" scrolly="1608" systemname="StarFieldForce" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\StarFieldForce.v4p">
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\StarFieldForce.v4p" scrollx="1044" scrolly="1560" systemname="StarFieldForce" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\StarFieldForce.v4p">
    <BOUNDS type="Window" left="540" top="1248" width="12912" height="12336">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -447,7 +447,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Radius" slicecount="1" values="0.01">
+   <PIN pinname="Radius" slicecount="1" values="0.03" visible="1">
    </PIN>
    <PIN pinname="Resolution X" slicecount="1" values="10">
    </PIN>
@@ -527,5 +527,73 @@
    <LINK srcnodeid="92" srcpinname="Layer" dstnodeid="91" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="90" srcpinname="Render State" dstnodeid="92" dstpinname="Render State">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="99">
+   <BOUNDS type="Box" left="7932" top="7284" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7932" top="7284" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.02">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="8628" top="5508" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="SoundVolume">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="8868" top="7380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" visible="1">
+   </PIN>
+   <PIN pinname="Destination Maximum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="100" srcpinname="Input Value" dstnodeid="101" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="93" dstpinname="Radius">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="102">
+   <BOUNDS type="Box" left="9240" top="6612" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9240" top="6612" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Destination Minimum|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Y Output Value" dstnodeid="101" dstpinname="Destination Minimum">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="103">
+   <BOUNDS type="Box" left="10068" top="6828" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10068" top="6828" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Destination Maximum|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="103" srcpinname="Y Output Value" dstnodeid="101" dstpinname="Destination Maximum">
    </LINK>
    </PATCH>

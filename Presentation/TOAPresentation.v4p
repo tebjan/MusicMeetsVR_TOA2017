@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
    <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\Presentation\TOAPresentation.v4p" systemname="TOAPresentation" filename="C:\Users\dom\Documents\MusicMeetsVR_TOA2017\Presentation\TOAPresentation.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="384" top="528" width="14664" height="11544">
+   <BOUNDS type="Window" left="384" top="528" width="14688" height="11544">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -419,7 +419,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4824" top="4536" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="10">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

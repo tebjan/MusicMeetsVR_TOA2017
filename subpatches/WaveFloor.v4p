@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
    <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\WaveFloor.v4p" systemname="WaveFloor" filename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\WaveFloor.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="4980" top="1848" width="9000" height="7896">
+   <BOUNDS type="Window" left="0" top="1368" width="9000" height="9228">
    </BOUNDS>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
@@ -113,7 +113,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.14">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="0.14">
    </PIN>
    </NODE>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="14" dstpinname="Input 1">
@@ -141,7 +141,7 @@
    </PIN>
    <PIN pinname="Cycles" visible="1">
    </PIN>
-   <PIN pinname="Period" slicecount="1" values="4.44">
+   <PIN pinname="Period" slicecount="1" values="3">
    </PIN>
    </NODE>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="19">
@@ -167,7 +167,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.42">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="0.32">
    </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="XY" dstnodeid="20" dstpinname="Input 1">
@@ -197,7 +197,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2676" top="6108" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.47266,1.00000,0.50950,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.54786,0.25884,0.54711,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
@@ -257,11 +257,109 @@
    </PIN>
    <PIN pinname="Y" slicecount="1" values="0.07">
    </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="0.19">
+   <PIN pinname="XYZ" slicecount="1" visible="1" values="0.19">
    </PIN>
    </NODE>
    <LINK srcnodeid="13" srcpinname="Transform Out" dstnodeid="15" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Transform Out" dstnodeid="23" dstpinname="Transform In">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="28">
+   <BOUNDS type="Box" left="2100" top="3156" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2100" top="3156" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.12">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="29">
+   <BOUNDS type="Node" left="2952" top="3192" width="684" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2952" top="3192" width="684" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; Power|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
+   <BOUNDS type="Box" left="2556" top="4404" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2556" top="4404" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.32">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="15" dstpinname="XYZ">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="31">
+   <BOUNDS type="Node" left="3420" top="4380" width="552" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3420" top="4380" width="552" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; Size|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="32">
+   <BOUNDS type="Node" left="2952" top="5184" width="840" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2952" top="5184" width="840" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; Rotation|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33">
+   <BOUNDS type="Node" left="3528" top="420" width="684" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3528" top="420" width="684" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; Speed|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="34">
+   <BOUNDS type="Node" left="5100" top="6168" width="660" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5100" top="6168" width="660" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; Color|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

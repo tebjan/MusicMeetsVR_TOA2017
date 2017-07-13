@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\_root_TOA_Demo.v4p" scrollx="0" scrolly="0" systemname="_root_TOA_Demo" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\patches\_root_TOA_Demo.v4p">
-   <BOUNDS type="Window" left="1860" top="1836" width="10692" height="8436">
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\_root_TOA_Demo.v4p" scrollx="12" scrolly="0" systemname="_root_TOA_Demo" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\patches\_root_TOA_Demo.v4p">
+   <BOUNDS type="Window" left="288" top="600" width="14592" height="8436">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -24,10 +24,10 @@
    <PIN pinname="Layer 6" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE id="51" componentmode="Hidden" systemname="Scene" filename="subpatches\Scene.v4p" nodename="subpatches\Scene.v4p">
+   <NODE id="51" componentmode="InAWindow" systemname="Scene" filename="subpatches\Scene.v4p" nodename="subpatches\Scene.v4p">
    <PIN pinname="Enablede Boxes" slicecount="1" visible="1" values="1">
    </PIN>
-   <BOUNDS type="Window" left="216" top="1884" width="12900" height="7752">
+   <BOUNDS type="Window" left="612" top="3180" width="15624" height="12228">
    </BOUNDS>
    <PIN pinname="Controller" visible="1" slicecount="1" values="||">
    </PIN>
@@ -217,7 +217,7 @@
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
    <NODE id="32" componentmode="InAWindow" systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" stayontop="1">
-   <BOUNDS type="Window" left="13128" top="0" width="9912" height="7980">
+   <BOUNDS type="Window" left="15288" top="0" width="15600" height="9276">
    </BOUNDS>
    <BOUNDS type="Node" left="648" top="6003" width="100" height="100">
    </BOUNDS>
@@ -273,7 +273,7 @@
    <NODE systemname="Soundengine" filename="subpatches\Soundengine.v4p" nodename="subpatches\Soundengine.v4p" componentmode="Hidden" id="102">
    <BOUNDS type="Node" left="4548" top="3324" width="2484" height="276">
    </BOUNDS>
-   <PIN pinname="Drum Gain" visible="1" slicecount="1" values="-1.00719392299652">
+   <PIN pinname="Drum Gain" visible="1" slicecount="1" values="0.05">
    </PIN>
    <PIN pinname="Enabled" visible="1" slicecount="48" values="0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0">
    </PIN>
@@ -287,15 +287,15 @@
    </PIN>
    <PIN pinname="Enabled Right" visible="1">
    </PIN>
-   <PIN pinname="Power Right" visible="1">
+   <PIN pinname="Power Right" visible="1" slicecount="1" values="0.01">
    </PIN>
    </NODE>
-   <NODE systemname="AudioControls" filename="subpatches\AudioControls.v4p" nodename="subpatches\AudioControls.v4p" componentmode="Hidden" id="124">
+   <NODE systemname="AudioControls" filename="subpatches\AudioControls.v4p" nodename="subpatches\AudioControls.v4p" componentmode="InAWindow" id="124">
    <BOUNDS type="Node" left="4780" top="2142" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="2366" top="0" width="4828" height="8128">
    </BOUNDS>
-   <BOUNDS type="Window" left="3972" top="1116" width="7632" height="8124">
+   <BOUNDS type="Window" left="3972" top="1116" width="10188" height="9708">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -308,7 +308,7 @@
    </LINK>
    <LINK srcnodeid="124" srcpinname="Sound Enabled" dstnodeid="102" dstpinname="Enabled Left">
    </LINK>
-   <NODE systemname="AudioControls" filename="subpatches\AudioControls.v4p" nodename="subpatches\AudioControls.v4p" componentmode="Hidden" id="125">
+   <NODE systemname="AudioControls" filename="subpatches\AudioControls.v4p" nodename="subpatches\AudioControls.v4p" componentmode="InAWindow" id="125">
    <BOUNDS type="Node" left="6312" top="2160" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Controller" visible="1">
@@ -323,8 +323,6 @@
    <LINK srcnodeid="26" srcpinname="Right Controller" dstnodeid="125" dstpinname="Controller">
    </LINK>
    <LINK srcnodeid="125" srcpinname="Sound Enabled" dstnodeid="102" dstpinname="Enabled Right">
-   </LINK>
-   <LINK srcnodeid="125" srcpinname="Power" dstnodeid="102" dstpinname="Power Right">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="128">
    <BOUNDS type="Box" left="1668" top="4632" width="1596" height="444">
@@ -399,5 +397,73 @@
    <LINK srcnodeid="129" srcpinname="frames per second" dstnodeid="132" dstpinname="Go To Position">
    </LINK>
    <LINK srcnodeid="132" srcpinname="Position Out" dstnodeid="130" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="133">
+   <BOUNDS type="Node" left="2760" top="6600" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2760" top="6600" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="10332" top="7368" width="12036" height="6600">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Layer Out" dstnodeid="133" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\lib\packs\VL.EditingFramework.0.55.43-g436959e253\vvvv\nodes\modules\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="134">
+   <BOUNDS type="Node" left="4188" top="5748" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="134" srcpinname="View" dstnodeid="133" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="134" srcpinname="Projection" dstnodeid="133" dstpinname="Projection">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="135">
+   <BOUNDS type="Node" left="10176" top="432" width="900" height="240">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10176" top="432" width="3288" height="1572">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|- air drums&cr;&lf;- trigger loop by sound input&cr;&lf;- draw/record sound&cr;&lf;- developer feedback&cr;&lf;- sound visualization&cr;&lf;- spatial audio|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="136">
+   <BOUNDS type="Node" left="2760" top="2100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Right Controller" dstnodeid="136" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="137">
+   <BOUNDS type="Box" left="4284" top="1404" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4284" top="1404" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|Right Controller|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="137" srcpinname="Output String" dstnodeid="136" dstpinname="Send String">
    </LINK>
    </PATCH>

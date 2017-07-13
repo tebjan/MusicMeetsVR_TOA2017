@@ -1,0 +1,275 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\AirDrums.v4p" systemname="AirDrums" filename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\AirDrums.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="2304" top="468" width="10140" height="9384">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="Sphere (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Sphere (DX11.Geometry)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="516" top="4884" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="516" top="4884" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="PhongDirectional (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\PhongDirectional.fx" nodename="PhongDirectional (DX11.Effect)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="624" top="6672" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|0.51072,0.51072,0.51072,1.00000|">
+   </PIN>
+   <PIN pinname="Diffuse Color" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Geometry Out" dstnodeid="1" dstpinname="Geometry">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="2">
+   <BOUNDS type="Box" left="480" top="7632" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="480" top="7632" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4">
+   <BOUNDS type="Box" left="1284" top="588" width="792" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1284" top="588" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.44,1.15,0.57">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="6">
+   <BOUNDS type="Box" left="3756" top="5568" width="2256" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3756" top="5568" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.64782,0.14948,0.14948,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AudioOut (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="AudioOut (VAudio)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="7668" top="8244" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7668" top="8244" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileStream (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="FileStream (VAudio)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="7512" top="7152" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7512" top="7152" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Audio Out" visible="1">
+   </PIN>
+   <PIN pinname="Play" visible="1">
+   </PIN>
+   <PIN pinname="Duration" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="Loop" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Volume" slicecount="1" values="6">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="10">
+   <BOUNDS type="Box" left="3324" top="3480" width="6084" height="612">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3324" top="3480" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="2" visible="1" values="|C:\Users\VR4-INVR\Documents\Soundaufnahmen\Aufnahme läuft (4).m4a|,|C:\Users\VR4-INVR\Documents\Soundaufnahmen\Aufnahme läuft.m4a|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|Audio File (*.wav, *.mp3, *.aiff, *.m4a)||*.wav;*.mp3;*.aiff;*.m4a|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output String" dstnodeid="9" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Audio Out" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12">
+   <BOUNDS type="Box" left="8040" top="7860" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8040" top="7860" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Duration" dstnodeid="12" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13">
+   <BOUNDS type="Box" left="9276" top="8016" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9276" top="8016" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Position" dstnodeid="13" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="7812" top="144" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Controller (OpenVR Split)" filename="%VVVV%\packs\VVVV.OpenVR\nodes\plugins\VVVV.OpenVR.dll" nodename="Controller (OpenVR Split)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="7800" top="576" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7800" top="576" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Controller" visible="1">
+   </PIN>
+   <PIN pinname="Pose" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Input Value" dstnodeid="15" dstpinname="Controller">
+   </LINK>
+   <NODE systemname="ApplyTransform (Transform Vector)" nodename="ApplyTransform (Transform Vector)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="8040" top="972" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Pose" dstnodeid="16" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17">
+   <BOUNDS type="Box" left="8688" top="1716" width="1104" height="1260">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8688" top="1716" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="XYZ Transformed" dstnodeid="17" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Switch (Color Input)" nodename="Switch (Color Input)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="2244" top="6204" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Color Output" dstnodeid="23" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="1" dstpinname="Diffuse Color">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="24">
+   <BOUNDS type="Box" left="3768" top="5052" width="2256" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3768" top="5052" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.17140,0.62182,0.14353,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="23" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="AirDrumsCalc1" filename="AirDrumsCalc1.v4p" nodename="AirDrumsCalc1.v4p" componentmode="InAWindow" id="25">
+   <BOUNDS type="Node" left="1784" top="2344" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="274" width="6456" height="4140">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8424" top="3768" width="6456" height="4140">
+   </BOUNDS>
+   <PIN pinname="Translate XYZ - XYZ1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="9" dstpinname="Play">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="23" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="XYZ Transformed" dstnodeid="25" dstpinname="XYZ2">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26">
+   <BOUNDS type="Box" left="2364" top="636" width="792" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2364" top="636" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="-0.96,1.15,0.36">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Cons (3d)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (3d)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="1800" top="1692" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1800" top="1692" width="2400" height="2400">
+   </BOUNDS>
+   <PIN pinname="Input 1XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Input 2XYZ" visible="1">
+   </PIN>
+   <PIN pinname="OutputXYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="28" dstpinname="Input 1XYZ">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="28" dstpinname="Input 2XYZ">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="OutputXYZ" dstnodeid="25" dstpinname="Translate XYZ - XYZ1">
+   </LINK>
+   </PATCH>

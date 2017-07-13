@@ -1,0 +1,123 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\AirDrumsCalc1.v4p" systemname="AirDrumsCalc1" filename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\AirDrumsCalc1.v4p">
+   <NODE systemname="Transform (Transform 3d Vector)" nodename="Transform (Transform 3d Vector)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="1980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Translate XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Distance (3d)" filename="%VVVV%\lib\nodes\modules\3D\Distance (3d).v4p" nodename="Distance (3d)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="3828" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ1" visible="1">
+   </PIN>
+   <PIN pinname="XYZ2" visible="1">
+   </PIN>
+   <PIN pinname="Distance" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="3828" top="2232" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2568" top="2208" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2568" top="2208" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4956" top="1992" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4956" top="1992" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.59">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="5" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4824" top="2640" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4824" top="2640" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <NODE id="6" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Translate XYZ - XYZ1|">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Translate XYZ">
+   </LINK>
+   <NODE id="7" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="3140" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="3140" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Transform Out" dstnodeid="7" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Distance" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Distance" dstnodeid="2" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Input 2">
+   </LINK>
+   <NODE id="8" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="3828" top="3140" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3828" top="3140" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="1" dstpinname="XYZ1">
+   </LINK>
+   <NODE id="9" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="XYZ2">
+   </PIN>
+   <BOUNDS type="Box" left="3828" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3828" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="1" dstpinname="XYZ2">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="6456" height="4140">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   </PATCH>
