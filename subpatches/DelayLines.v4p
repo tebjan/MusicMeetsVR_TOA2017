@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\DelayLines.v4p" systemname="DelayLines" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\DelayLines.v4p" scrollx="0" scrolly="2268">
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\DelayLines.v4p" systemname="DelayLines" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\DelayLines.v4p" scrollx="0" scrolly="636">
    <BOUNDS type="Window" left="1044" top="444" width="19716" height="13008">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -789,7 +789,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   <PIN pinname="Input" slicecount="1" values="|0.00000,1.00000,0.94533,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="122" srcpinname="Output" dstnodeid="152" dstpinname="Alpha">

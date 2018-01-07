@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\Scene.v4p" systemname="Scene" filename="C:\vvvv\PROJECTS\2016\07_OpenVR\VVVV.OpenVR\girlpower\subpatches\Scene.v4p" scrollx="2928" scrolly="24">
+   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\Scene.v4p" systemname="Scene" filename="C:\vvvv\PROJECTS\2016\07_OpenVR\VVVV.OpenVR\girlpower\subpatches\Scene.v4p" scrollx="1824" scrolly="0">
    <NODE id="1" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -10,12 +10,12 @@
    <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="612" top="3180" width="15624" height="12228">
+   <BOUNDS type="Window" left="216" top="1884" width="12900" height="7752">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="2406" top="5610" width="13404" height="276">
+   <BOUNDS type="Node" left="2406" top="5610" width="9204" height="276">
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
@@ -23,7 +23,7 @@
    </PIN>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="6">
+   <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
@@ -125,19 +125,19 @@
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
    <NODE systemname="WaveFloor" filename="WaveFloor.v4p" componentmode="Hidden" id="130" nodename="WaveFloor.v4p" stayontop="0">
-   <BOUNDS type="Node" left="6084" top="4320" width="100" height="100">
+   <BOUNDS type="Node" left="5940" top="4188" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6084" top="4320" width="4800" height="3600">
+   <BOUNDS type="Box" left="5940" top="4188" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="1368" width="9000" height="9228">
+   <BOUNDS type="Window" left="4980" top="1848" width="9000" height="7896">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="StableFloor" filename="StableFloor.v4p" componentmode="Hidden" id="133" nodename="StableFloor.v4p">
-   <BOUNDS type="Node" left="5904" top="3576" width="100" height="100">
+   <BOUNDS type="Node" left="6060" top="4728" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5904" top="3576" width="4800" height="3600">
+   <BOUNDS type="Box" left="6060" top="4728" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="1560" top="876" width="10428" height="7212">
    </BOUNDS>
@@ -152,12 +152,12 @@
    </NODE>
    <LINK srcnodeid="135" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 1">
    </LINK>
-   <NODE systemname="OvertoneController" filename="OvertoneController.v4p" componentmode="Hidden" id="136" nodename="OvertoneController.v4p" stayontop="0">
+   <NODE systemname="OvertoneController" filename="OvertoneController.v4p" componentmode="Hidden" id="136" nodename="OvertoneController.v4p" stayontop="1">
    <BOUNDS type="Node" left="7896" top="4776" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="7896" top="4776" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="804" top="2832" width="12660" height="9528">
+   <BOUNDS type="Window" left="192" top="828" width="10164" height="9528">
    </BOUNDS>
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -216,6 +216,8 @@
    </NODE>
    <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="136" dstpinname="Power">
    </LINK>
+   <LINK srcnodeid="133" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
+   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="145" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="10482" top="1026" width="795" height="240">
    </BOUNDS>
@@ -253,31 +255,5 @@
    <LINK srcnodeid="144" srcpinname="Pose" dstnodeid="139" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="125" srcpinname="Pose" dstnodeid="136" dstpinname="Transform In">
-   </LINK>
-   <LINK srcnodeid="133" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
-   </LINK>
-   <NODE systemname="DeveloperFeedback" filename="DeveloperFeedback.v4p" componentmode="InAWindow" id="146" nodename="DeveloperFeedback.v4p">
-   <BOUNDS type="Node" left="12420" top="5076" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="12420" top="5076" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="2172" top="4284" width="9000" height="6000">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="146" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 5">
-   </LINK>
-   <NODE systemname="AirDrums" filename="AirDrums.v4p" componentmode="InAWindow" id="147" nodename="AirDrums.v4p">
-   <BOUNDS type="Node" left="14916" top="5088" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="14916" top="5088" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="2304" top="468" width="10140" height="9384">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="147" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 6">
    </LINK>
    </PATCH>
