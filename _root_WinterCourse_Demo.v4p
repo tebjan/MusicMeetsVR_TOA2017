@@ -24,7 +24,7 @@
    <PIN pinname="Layer 6" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE id="51" componentmode="InAWindow" systemname="Scene" filename="subpatches\Scene.v4p" nodename="subpatches\Scene.v4p">
+   <NODE id="51" componentmode="Hidden" systemname="Scene" filename="subpatches\Scene.v4p" nodename="subpatches\Scene.v4p">
    <PIN pinname="Enablede Boxes" slicecount="1" visible="1" values="1">
    </PIN>
    <BOUNDS type="Window" left="216" top="1884" width="12900" height="7752">

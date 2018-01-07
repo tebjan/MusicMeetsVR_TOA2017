@@ -1,0 +1,125 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
+   <PATCH nodename="C:\Users\CeeYaa\Desktop\vvvvAcademy\MusicMeetsVR_TOA2017\subpatches\KinectMan.v4p" systemname="KinectMan" filename="C:\Users\CeeYaa\Desktop\vvvvAcademy\MusicMeetsVR_TOA2017\subpatches\KinectMan.v4p">
+   <BOUNDS type="Window" left="1980" top="5610" width="9000" height="6000">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.0.3">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="Stickman (Kinect DX11)" filename="Stickman (Kinect DX11).v4p" nodename="Stickman (Kinect DX11)" componentmode="InAWindow" id="0">
+   <BOUNDS type="Node" left="1500" top="3375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Joint PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1">
+   <BOUNDS type="Box" left="1485" top="4050" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1485" top="4050" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="UDP (Network Server)" nodename="UDP (Network Server)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="4020" top="1815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsValue (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsValue (Raw)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="4005" top="2505" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4005" top="2505" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <NODE systemname="IP (Network)" nodename="IP (Network)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3795" top="825" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="0" dstpinname="Joint PositionXYZ">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6">
+   <BOUNDS type="Box" left="555" top="1035" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="555" top="1035" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.75,1.45">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7">
+   <BOUNDS type="Box" left="2115" top="1035" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2115" top="1035" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.5,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Translate (Transform Vector)" nodename="Translate (Transform Vector)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="765" top="2235" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Translate XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Rotate XYZ" visible="1" slicecount="3" values="0,-0.05,0">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Translate XYZ">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="5" dstpinname="XYZ">
+   </LINK>
+   <NODE systemname="Rotate (Transform Vector)" nodename="Rotate (Transform Vector)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="1275" top="2820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="8" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="8" dstpinname="XYZ">
+   </LINK>
+   </PATCH>

@@ -7,7 +7,7 @@
    <PACK Name="vvvv-Message" Version="2.9.6">
    </PACK>
    <NODE systemname="AudioIn (VAudio Source)" nodename="AudioIn (VAudio Source)" componentmode="Hidden" id="5" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
-   <BOUNDS type="Node" left="2892" top="3687" width="100" height="100">
+   <BOUNDS type="Node" left="2907" top="3552" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Audio Out" visible="1">
    </PIN>
@@ -37,9 +37,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="68">
-   <BOUNDS type="Box" left="4296" top="4980" width="792" height="240">
+   <BOUNDS type="Box" left="3906" top="3960" width="792" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4296" top="4980" width="0" height="0">
+   <BOUNDS type="Node" left="3906" top="3960" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -53,5 +53,31 @@
    <LINK srcnodeid="60" srcpinname="Layer" dstnodeid="57" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="5" srcpinname="Audio Out" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Meter (VAudio Sink)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="Meter (VAudio Sink)" componentmode="Hidden" id="69">
+   <BOUNDS type="Node" left="4890" top="5160" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4890" top="5160" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="0.01">
+   </PIN>
+   <PIN pinname="Level dBs" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Audio Out" dstnodeid="69" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="70">
+   <BOUNDS type="Box" left="4920" top="6105" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4920" top="6105" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="69" srcpinname="Level dBs" dstnodeid="70" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
