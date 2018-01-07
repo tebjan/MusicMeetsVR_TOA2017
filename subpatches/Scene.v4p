@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\Scene.v4p" systemname="Scene" filename="C:\vvvv\PROJECTS\2016\07_OpenVR\VVVV.OpenVR\girlpower\subpatches\Scene.v4p" scrollx="1824" scrolly="0">
+   <PATCH nodename="C:\Users\CeeYaa\Desktop\vvvvAcademy\MusicMeetsVR_TOA2017\subpatches\Scene.v4p" systemname="Scene" filename="C:\vvvv\PROJECTS\2016\07_OpenVR\VVVV.OpenVR\girlpower\subpatches\Scene.v4p" scrollx="1824" scrolly="0">
    <NODE id="1" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -49,39 +49,17 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="126" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="7878" top="1110" width="795" height="240">
+   <BOUNDS type="Box" left="9318" top="1125" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7878" top="1110" width="0" height="0">
+   <BOUNDS type="Node" left="9318" top="1125" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Left Controller|">
    </PIN>
-   </NODE>
-   <NODE systemname="Controller (OpenVR Split)" filename="..\..\nodes\plugins\VVVV.OpenVR.dll" nodename="Controller (OpenVR Split)" componentmode="Hidden" id="125">
-   <BOUNDS type="Node" left="7878" top="2040" width="2028" height="276">
-   </BOUNDS>
-   <PIN pinname="Controller" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Device Role" visible="1">
-   </PIN>
-   <PIN pinname="Device Index" visible="1">
-   </PIN>
-   <PIN pinname="Trigger Touch" visible="1">
-   </PIN>
-   <PIN pinname="Trigger Axis" visible="1">
-   </PIN>
-   <PIN pinname="Touchpad Touch" visible="1">
-   </PIN>
-   <PIN pinname="Touchpad Press" visible="1">
-   </PIN>
-   <PIN pinname="Touchpad AxisXY" visible="1">
-   </PIN>
-   <PIN pinname="Pose" visible="1">
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="126" srcpinname="Output Node" dstnodeid="125" dstpinname="Controller">
-   </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="127">
    <BOUNDS type="Node" left="2796" top="1677" width="100" height="100">
    </BOUNDS>
@@ -122,12 +100,12 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <NODE systemname="WaveFloor" filename="WaveFloor.v4p" componentmode="Hidden" id="130" nodename="WaveFloor.v4p" stayontop="0">
-   <BOUNDS type="Node" left="5940" top="4188" width="100" height="100">
+   <BOUNDS type="Node" left="6075" top="3648" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5940" top="4188" width="4800" height="3600">
+   <BOUNDS type="Box" left="6075" top="3648" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="4980" top="1848" width="9000" height="7896">
    </BOUNDS>
@@ -135,9 +113,9 @@
    </PIN>
    </NODE>
    <NODE systemname="StableFloor" filename="StableFloor.v4p" componentmode="Hidden" id="133" nodename="StableFloor.v4p">
-   <BOUNDS type="Node" left="6060" top="4728" width="100" height="100">
+   <BOUNDS type="Node" left="6480" top="4263" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6060" top="4728" width="4800" height="3600">
+   <BOUNDS type="Box" left="6480" top="4263" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="1560" top="876" width="10428" height="7212">
    </BOUNDS>
@@ -152,108 +130,46 @@
    </NODE>
    <LINK srcnodeid="135" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 1">
    </LINK>
-   <NODE systemname="OvertoneController" filename="OvertoneController.v4p" componentmode="Hidden" id="136" nodename="OvertoneController.v4p" stayontop="1">
-   <BOUNDS type="Node" left="7896" top="4776" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7896" top="4776" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="192" top="828" width="10164" height="9528">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Power" slicecount="1" visible="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="136" srcpinname="Layer Out" dstnodeid="7" dstpinname="Layer 3">
-   </LINK>
-   <NODE systemname="OvertoneController" filename="OvertoneController.v4p" componentmode="Hidden" id="139" nodename="OvertoneController.v4p" stayontop="1">
-   <BOUNDS type="Node" left="10512" top="4800" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="10512" top="4800" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="192" top="828" width="10164" height="9528">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Power" slicecount="1" visible="1" values="1.93">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="139" srcpinname="Layer Out" dstnodeid="7" dstpinname="Layer 4">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="142">
-   <BOUNDS type="Box" left="13296" top="3804" width="792" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="13296" top="3804" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.93">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Power Right|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="142" srcpinname="Y Output Value" dstnodeid="139" dstpinname="Power">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="143">
-   <BOUNDS type="Box" left="12288" top="3792" width="792" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="12288" top="3792" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Power Left|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="136" dstpinname="Power">
-   </LINK>
-   <LINK srcnodeid="133" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="145" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="10482" top="1026" width="795" height="240">
+   <BOUNDS type="Box" left="10947" top="1026" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="10482" top="1026" width="0" height="0">
+   <BOUNDS type="Node" left="10947" top="1026" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Right Controller|">
    </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
-   <NODE systemname="Controller (OpenVR Split)" filename="..\..\nodes\plugins\VVVV.OpenVR.dll" nodename="Controller (OpenVR Split)" componentmode="Hidden" id="144">
-   <BOUNDS type="Node" left="10482" top="1956" width="2028" height="276">
+   <LINK srcnodeid="133" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="ViveController (OpenVR DX11.Layer)" filename="%VVVV%\packs\VVVV.OpenVR\nodes\modules\ViveController (OpenVR DX11.Layer).v4p" nodename="ViveController (OpenVR DX11.Layer)" componentmode="Hidden" id="146">
+   <BOUNDS type="Node" left="9705" top="3345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Controller" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Show Axis" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="145" srcpinname="Output Node" dstnodeid="146" dstpinname="Controller">
+   </LINK>
+   <LINK srcnodeid="146" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 4">
+   </LINK>
+   <NODE systemname="ViveController (OpenVR DX11.Layer)" filename="%VVVV%\packs\VVVV.OpenVR\nodes\modules\ViveController (OpenVR DX11.Layer).v4p" nodename="ViveController (OpenVR DX11.Layer)" componentmode="Hidden" id="147">
+   <BOUNDS type="Node" left="8100" top="3390" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Controller" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Device Role" visible="1">
+   <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Device Index" visible="1">
-   </PIN>
-   <PIN pinname="Trigger Touch" visible="1">
-   </PIN>
-   <PIN pinname="Trigger Axis" visible="1">
-   </PIN>
-   <PIN pinname="Touchpad Touch" visible="1">
-   </PIN>
-   <PIN pinname="Touchpad Press" visible="1">
-   </PIN>
-   <PIN pinname="Touchpad AxisXY" visible="1">
-   </PIN>
-   <PIN pinname="Pose" visible="1">
+   <PIN pinname="Show Axis" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="145" srcpinname="Output Node" dstnodeid="144" dstpinname="Controller">
+   <LINK srcnodeid="126" srcpinname="Output Node" dstnodeid="147" dstpinname="Controller">
    </LINK>
-   <LINK srcnodeid="144" srcpinname="Pose" dstnodeid="139" dstpinname="Transform In">
-   </LINK>
-   <LINK srcnodeid="125" srcpinname="Pose" dstnodeid="136" dstpinname="Transform In">
+   <LINK srcnodeid="147" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 3">
    </LINK>
    </PATCH>

@@ -1,97 +1,19 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\VR4-INVR\Documents\MusicMeetsVR_TOA2017\subpatches\Soundengine.v4p" scrollx="0" scrolly="0" systemname="Soundengine" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\Soundengine.v4p">
-   <BOUNDS type="Window" left="852" top="516" width="13524" height="11592">
+   <PATCH nodename="C:\Users\CeeYaa\Desktop\vvvvAcademy\MusicMeetsVR_TOA2017\subpatches\Soundengine.v4p" scrollx="0" scrolly="0" systemname="Soundengine" filename="C:\vvvv\PROJECTS\2017\09_TOA_InVR\MusicMeetsVR_TOA2017\subpatches\Soundengine.v4p">
+   <BOUNDS type="Window" left="11715" top="5385" width="13515" height="11580">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE systemname="SoundGenerator" filename="SoundGenerator.v4p" componentmode="Hidden" id="0" nodename="SoundGenerator.v4p">
-   <BOUNDS type="Node" left="2976" top="3900" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2976" top="3900" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="3495" width="14820" height="14505">
-   </BOUNDS>
-   <PIN pinname="Expression" slicecount="1" visible="1" values="0.11">
-   </PIN>
-   <PIN pinname="Audio Out" visible="1">
-   </PIN>
-   <PIN pinname="Synth Gain" slicecount="1" visible="1" values="0.97">
-   </PIN>
-   <PIN pinname="Drum Gain" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="48" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
-   </PIN>
-   </NODE>
    <PACK Name="vvvv-Message" Version="2.9.6">
    </PACK>
    <NODE systemname="AudioIn (VAudio Source)" nodename="AudioIn (VAudio Source)" componentmode="Hidden" id="5" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll">
-   <BOUNDS type="Node" left="7602" top="3927" width="100" height="100">
+   <BOUNDS type="Node" left="2892" top="3687" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Audio Out" visible="1">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="51">
-   <BOUNDS type="Box" left="2181" top="2670" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2181" top="2670" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-1.00719392299652">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Drum Gain|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="51" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Drum Gain">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="53">
-   <BOUNDS type="Node" left="3486" top="900" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3486" top="900" width="1860" height="1710">
-   </BOUNDS>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="48" values="0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="6">
-   </PIN>
-   <PIN pinname="Columns" slicecount="1" values="8">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Enabled Left|">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="48" values="0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="53" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="54">
-   <BOUNDS type="Box" left="4011" top="3060" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4011" top="3060" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.97">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Power Left|">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Synth Gain">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="57">
    <BOUNDS type="Box" left="2772" top="5739" width="795" height="240">
    </BOUNDS>
@@ -114,86 +36,6 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="63">
-   <BOUNDS type="Node" left="6438" top="900" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6438" top="900" width="1860" height="1710">
-   </BOUNDS>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="48" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,0,0">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="6">
-   </PIN>
-   <PIN pinname="Columns" slicecount="1" values="8">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Enabled Right|">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="48" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,1,1,0,0,0,1,0,0,0,0,0">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="62">
-   <BOUNDS type="Box" left="6903" top="3192" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6903" top="3192" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.97">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Power Right|">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Expression">
-   </LINK>
-   <NODE systemname="SoundGenerator" filename="SoundGenerator.v4p" componentmode="Hidden" id="65" nodename="SoundGenerator.v4p">
-   <BOUNDS type="Node" left="5976" top="3936" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5976" top="3936" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="3495" width="14820" height="14505">
-   </BOUNDS>
-   <PIN pinname="Expression" slicecount="1" visible="1" values="0.11">
-   </PIN>
-   <PIN pinname="Audio Out" visible="1">
-   </PIN>
-   <PIN pinname="Synth Gain" slicecount="1" visible="1" values="0.97">
-   </PIN>
-   <PIN pinname="Drum Gain" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="48" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="65" dstpinname="Enabled">
-   </LINK>
-   <NODE systemname="Add (VAudio)" filename="%VVVV%\packs\VVVV.Audio\nodes\plugins\VVVV.Audio.Nodes.dll" nodename="Add (VAudio)" componentmode="Hidden" id="67">
-   <BOUNDS type="Node" left="2964" top="4560" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2964" top="4560" width="2400" height="2400">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Audio Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="0" srcpinname="Audio Out" dstnodeid="67" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="65" srcpinname="Audio Out" dstnodeid="67" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="67" srcpinname="Audio Out" dstnodeid="60" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="68">
    <BOUNDS type="Box" left="4296" top="4980" width="792" height="240">
    </BOUNDS>
@@ -208,10 +50,8 @@
    </NODE>
    <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="60" dstpinname="Multiply signal">
    </LINK>
-   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="65" dstpinname="Expression">
-   </LINK>
-   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="65" dstpinname="Synth Gain">
-   </LINK>
    <LINK srcnodeid="60" srcpinname="Layer" dstnodeid="57" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Audio Out" dstnodeid="60" dstpinname="Input">
    </LINK>
    </PATCH>
