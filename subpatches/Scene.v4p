@@ -10,7 +10,7 @@
    <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="216" top="1884" width="12900" height="7752">
+   <BOUNDS type="Window" left="210" top="1875" width="13170" height="7740">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -103,9 +103,9 @@
    <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <NODE systemname="WaveFloor" filename="WaveFloor.v4p" componentmode="Hidden" id="130" nodename="WaveFloor.v4p" stayontop="0">
-   <BOUNDS type="Node" left="6075" top="3648" width="100" height="100">
+   <BOUNDS type="Node" left="5790" top="3513" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6075" top="3648" width="4800" height="3600">
+   <BOUNDS type="Box" left="5790" top="3513" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="4980" top="1848" width="9000" height="7896">
    </BOUNDS>
@@ -113,9 +113,9 @@
    </PIN>
    </NODE>
    <NODE systemname="StableFloor" filename="StableFloor.v4p" componentmode="Hidden" id="133" nodename="StableFloor.v4p">
-   <BOUNDS type="Node" left="6480" top="4263" width="100" height="100">
+   <BOUNDS type="Node" left="6015" top="4053" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6480" top="4263" width="4800" height="3600">
+   <BOUNDS type="Box" left="6015" top="4053" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="1560" top="876" width="10428" height="7212">
    </BOUNDS>
@@ -142,8 +142,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="133" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
-   </LINK>
    <NODE systemname="ViveController (OpenVR DX11.Layer)" filename="%VVVV%\packs\VVVV.OpenVR\nodes\modules\ViveController (OpenVR DX11.Layer).v4p" nodename="ViveController (OpenVR DX11.Layer)" componentmode="Hidden" id="146">
    <BOUNDS type="Node" left="9705" top="3345" width="100" height="100">
    </BOUNDS>
@@ -177,11 +175,23 @@
    </BOUNDS>
    <BOUNDS type="Box" left="12030" top="4065" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="1980" top="5610" width="9000" height="6000">
+   <BOUNDS type="Window" left="3420" top="5265" width="8490" height="6000">
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="148" srcpinname="Layer Out" dstnodeid="7" dstpinname="Layer 5">
+   </LINK>
+   <NODE systemname="Future City" filename="Future City.v4p" componentmode="Hidden" id="149" nodename="Future City.v4p">
+   <BOUNDS type="Node" left="6030" top="4605" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6030" top="4605" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2190" top="5820" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="149" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
    </LINK>
    </PATCH>

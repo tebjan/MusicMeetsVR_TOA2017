@@ -1,21 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
    <PATCH nodename="C:\Users\CeeYaa\Desktop\vvvvAcademy\MusicMeetsVR_TOA2017\subpatches\KinectMan.v4p" systemname="KinectMan" filename="C:\Users\CeeYaa\Desktop\vvvvAcademy\MusicMeetsVR_TOA2017\subpatches\KinectMan.v4p">
-   <BOUNDS type="Window" left="1980" top="5610" width="9000" height="6000">
+   <BOUNDS type="Window" left="3420" top="5265" width="8490" height="6000">
    </BOUNDS>
    <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE systemname="Stickman (Kinect DX11)" filename="Stickman (Kinect DX11).v4p" nodename="Stickman (Kinect DX11)" componentmode="InAWindow" id="0">
-   <BOUNDS type="Node" left="1500" top="3375" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Joint PositionXYZ" visible="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1">
    <BOUNDS type="Box" left="1485" top="4050" width="795" height="240">
    </BOUNDS>
@@ -23,23 +13,25 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
    </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="UDP (Network Server)" nodename="UDP (Network Server)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="4020" top="1815" width="100" height="100">
+   <BOUNDS type="Node" left="2895" top="2010" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="AsValue (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsValue (Raw)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="4005" top="2505" width="100" height="100">
+   <BOUNDS type="Node" left="2880" top="2505" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4005" top="2505" width="3000" height="3000">
+   <BOUNDS type="Box" left="2880" top="2505" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Output Bin Size" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Input">
@@ -48,8 +40,6 @@
    <BOUNDS type="Node" left="3795" top="825" width="100" height="100">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="0" dstpinname="Joint PositionXYZ">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6">
    <BOUNDS type="Box" left="555" top="1035" width="795" height="720">
    </BOUNDS>
@@ -116,10 +106,38 @@
    </NODE>
    <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="8" dstpinname="Transform In">
    </LINK>
-   <LINK srcnodeid="8" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform In">
-   </LINK>
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Y">
    </LINK>
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="8" dstpinname="XYZ">
+   </LINK>
+   <NODE systemname="Stickman (Kinect DX11)" filename="Stickman (Kinect DX11).v4p" nodename="Stickman (Kinect DX11)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1500" top="3375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Joint PositionXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="2895" top="3120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output Bin Size" dstnodeid="9" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="0" dstpinname="Joint PositionXYZ">
    </LINK>
    </PATCH>

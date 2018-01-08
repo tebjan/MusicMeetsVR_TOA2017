@@ -1,0 +1,23 @@
+newmtl sg_pool
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd scan_skate02_v06.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 18.00
+newmtl sg_sky_a
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pano_skate02a_baked.jpg
+Ni 1.00
+newmtl sg_sky_b
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pano_skate02b_baked.jpg
+Ni 1.00
